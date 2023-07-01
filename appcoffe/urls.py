@@ -22,6 +22,8 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from client.urls import router_client
+from orders.urls import router_orders
+from product.urls import router_product
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -44,6 +46,8 @@ class DefaultRouter(routers.DefaultRouter):
 
 router = DefaultRouter()
 router.extend(router_client)
+router.extend(router_orders)
+router.extend(router_product)
 
 
 urlpatterns = [

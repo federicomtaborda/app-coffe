@@ -2,8 +2,8 @@ from rest_framework import viewsets
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 
-from client.models import Client, Entity
-from client.serializers import ClientSerializer, EntitySerializer
+from .models import Client, Entity
+from .serializers import ClientSerializer, EntitySerializer
 
 
 class StandardResultsSetPagination(PageNumberPagination):
